@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --chronos-transition: 300ms linear;
+}
+
+@font-face {
+  font-family: "TT Firs Neue Trial Var Roman";
+  src: url("../assets/fonts/tt-firs-neue-trial-var-roman.ttf")
+    format("truetype");
+  font-display: swap;
+  font-weight: 400;
+}
+
+html {
+  font-family: "TT Firs Neue Trial Var Roman";
+}
+
+body {
+  @apply h-full bg-purple-dark-700;
+}
+
+.webkit-text-fill-color-transparent {
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes up {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.before-full {
+  @apply before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:z-10;
+}
+
+.after-full {
+  @apply after:content-[''] after:absolute after:top-0 after:left-0 after:w-full after:h-full after:z-20 after:transition-opacity after:duration-300 after:ease-linear
+}
+
+.before-none {
+  @apply before:content-none;
+}
+
+.after-none {
+  @apply after:content-none;
+}
+
+.before-gradient-purple-100 {
+  @apply before-full before:bg-gradient-purple-100;
+}
+
+.before-gradient-purple-200 {
+  @apply before-full before:bg-gradient-purple-200;
+}
+
+.after-gradient-purple-100 {
+  @apply after-full after:bg-gradient-purple-100;
+}
+
+.after-gradient-purple-100-on-hover {
+  @apply after-gradient-purple-100 after:opacity-0 hover:after:opacity-100;
+}
+
+.after-gradient-purple-200 {
+  @apply after-full after:bg-gradient-purple-200;
+}
+
+.after-gradient-purple-200-on-hover {
+  @apply after-gradient-purple-200 after:opacity-0 hover:after:opacity-100;
+}
+
+.rounded-all-10 {
+  @apply rounded-[10px] before:rounded-[10px] after:rounded-[10px];
+}
+
+.rounded-all-20 {
+  @apply rounded-20 before:rounded-20 after:rounded-20;
+}
+
+.rounded-all-full {
+  @apply rounded-full before:rounded-full after:rounded-full;
+}
+
+.rounded-all-lg {
+  @apply rounded-lg before:rounded-lg after:rounded-lg;
+}
+
+.rounded-all-xl {
+  @apply rounded-xl before:rounded-xl after:rounded-xl;
+}
+
+.rounded-all-2xl {
+  @apply rounded-2xl before:rounded-2xl after:rounded-2xl;
+}
+
+.rounded-all-3xl {
+  @apply rounded-3xl before:rounded-3xl after:rounded-3xl;
+}
+
+.bg-mountains {
+  @apply before:bg-center
+  before:bg-homebg1
+  before:bg-blend-lighten
+  before:bg-cover
+  before:bg-no-repeat
+  before:absolute
+  before:content-['']
+  before:w-full
+  before:h-full
+  before:opacity-30
+}
+
+.bg-key {
+  @apply 
+  after:bg-homebg2
+  after:bg-no-repeat
+  after:bg-contain
+  after:absolute
+  after:content-['']
+  after:mix-blend-lighten
+ 
+  after:w-[131.919%]
+  after:pt-[79.81%]
+  after:top-5
+  after:left-1/2
+  after:-translate-x-1/2
+  after:bg-top
+
+  lg:after:w-full
+  lg:after:pt-0
+  lg:after:top-0
+  lg:after:left-auto
+  lg:after:translate-x-0
+  lg:after:h-full
+  lg:after:bg-right
+
+}
+
+.user-dropdown
+{
+  @apply absolute
+  left-0
+  w-full
+  px-4
+  py-4
+  rounded-lg
+  top-full
+  mt-1
+  z-50
+  overflow-hidden
+  after:content-['']
+  after:absolute
+  after:top-0
+  after:left-0
+  after:z-10
+  after:w-full
+  after:h-full
+  after:opacity-90
+  after:transition-opacity
+  after:duration-300
+  after:ease-linear
+  after:bg-purple-dark-300
+}
