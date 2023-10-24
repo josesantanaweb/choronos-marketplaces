@@ -26,15 +26,15 @@ const Favorites = () => {
 
   return (
     <div className="favorites">
-      <div className="flex items-center justify-between mb-6">
-        <h4 className="mb-4 text-2xl text-white">Favorites</h4>
+      <div className="flex items-center justify-between mb-6 flex-wrap">
+        <h4 className="mb-4 text-base lg:text-2xl text-white">Favorites</h4>
         <div className="flex items-center gap-4">
           <FavoriteButton
             isFavorite={isFavorite}
             handleFavorite={handleFavorite}
             disabled
           />
-          <ShareButton disabled/>
+          <ShareButton disabled />
           <Button onClick={handleActivity} disabled>
             <span className="flex items-center justify-between gap-3">
               <FaHistory size={16} />
@@ -44,14 +44,19 @@ const Favorites = () => {
           <Button onClick={handleActivity}>List NFT</Button>
         </div>
       </div>
-      <div className="flex items-center gap-3 mb-6">
-        <Tabs options={options} selected={selected} setSelected={setSelected} numberTabs={3}/>
+      <div className="flex items-center gap-3 mb-6 flex-col md:flex-row">
+        <Tabs
+          options={options}
+          selected={selected}
+          setSelected={setSelected}
+          numberTabs={3}
+        />
         <FilterBy setFilter={setFilter} />
       </div>
       <Collection />
       <div className="my-3">
-        <h4 className="text-2xl text-white mb-4">Items</h4>
-        <div className="grid grid-cols-4 gap-4">
+        <h4 className="text-base lg:text-2xl text-white mb-4">Items</h4>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {recently.map((nft, index: number) => (
             <Card nft={nft} key={index} />
           ))}

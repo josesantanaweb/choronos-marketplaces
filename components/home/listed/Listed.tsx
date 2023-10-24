@@ -11,7 +11,7 @@ import { recently } from "@/data";
 const RecentListed = () => {
   const [filter, setFilter] = useState<string>("");
   return (
-    <section className="py-10 px-2.5 md:container mx-auto">
+    <section className="pt-10 px-2.5 md:container mx-auto">
       <div className="flex md:items-center justify-between mx-auto mb-10 md:mb-11 flex-col md:flex-row">
         <h3 className="mb-5 md:mb-0 text-lg md:text-3xl font-medium text-white">Recent Listed</h3>
         <div className="w-full md:w-[436px]">
@@ -24,7 +24,7 @@ const RecentListed = () => {
         ))}
       </div>
       <div className="flex items-center justify-center">
-        <Button link="listings" className="h-9 sm:h-14 text-xs sm:text-base rounded-15">Trade Now</Button>
+        <Button link="listings">Trade Now</Button>
       </div>
     </section>
   );

@@ -30,7 +30,7 @@ const Card = (props: ICardProps) => {
   return (
     <div
       className={twMerge(
-        "w-full relative overflow-hidden bg-purple-dark-800 rounded-lg md:rounded-3xl max-w-[165px] md:max-w-[260px] text-white",
+        "w-full relative overflow-hidden bg-purple-dark-800 rounded-b-lg rounded-t-15 md:rounded-3xl max-w-[180px] md:max-w-[320px] text-white",
         className
       )}
       onMouseOver={handleMouseOver}

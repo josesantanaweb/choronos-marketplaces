@@ -18,17 +18,17 @@ const UserInfo = () => {
           alt="front"
           width={430}
           height={350}
-          className="w-[430px] h-[240px] rounded-t-3xl"
+          className="w-[100%] h-[180px] md:h-[240px] rounded-t-3xl"
         />
       </div>
-      <div className="flex flex-col items-center justify-center p-6 mt-[-120px]">
+      <div className="flex flex-col items-center justify-center p-3 md:p-6 mt-[-120px]">
         <div className="relative">
           <Image
             src={Avatar}
             alt="avatar"
             width={180}
             height={180}
-            className="mb-3 border-8 rounded-full border-purple-chronos"
+            className="mb-3 border-8 rounded-full border-purple-chronos w-[120px] h-[120px] md:w-[180px] md:h-[180px]"
           />
           <span className="absolute flex items-center justify-center text-white rounded-full cursor-pointer top-2 right-5 w-7 h-7 bg-purple-chronos">
             <BiPencil size={18} />

@@ -127,8 +127,8 @@ const Deals = () => {
   }, []);
 
   return (
-    <section className="py-10">
-      <h3 className="md:container px-2.5 mx-auto mb-8 md:mb-10 text-lg md:text-3xl font-medium text-white">
+    <section className="pt-10">
+      <h3 className="md:container px-2.5 mx-auto mb-7 md:mb-10 text-lg md:text-3xl font-medium text-white">
         Best Deals
       </h3>
 

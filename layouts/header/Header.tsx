@@ -21,7 +21,7 @@ const Header = () => {
       <Logo className="md:block hidden" />
       <Menu menu={menu}/>
 
-      <div className="flex items-center justify-center gap-2 lg:gap-4 w-full">
+      <div className="flex items-center justify-center gap-1 lg:gap-4 w-full">
         <div className="flex w-full">
           <SearchBar />
         </div>
@@ -29,7 +29,6 @@ const Header = () => {
         {!isLogged ? (
           <Button
             onClick={() => setIsLogged(true)}
-            className="h-9 sm:h-14 text-xs sm:text-base rounded-15"
           >
             <div className="flex items-center gap-2 sm:gap-4 whitespace-nowrap">
               <BiWalletAlt size={21} />

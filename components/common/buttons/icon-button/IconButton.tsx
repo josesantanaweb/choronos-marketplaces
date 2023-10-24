@@ -56,7 +56,7 @@ const IconButton = ({
   className = "",
 }: IIconButtonProps) => {
 
-  const imageSizeClass = size === "small" ? "w-4" : "w-4 sm:w-5";
+  const imageSizeClass = "w-[1em] h-[1em]";
 
   const icons: Record<IIconButtonProps["icon"], Icon> = {
     sell: <FiTag />,
@@ -100,8 +100,8 @@ const IconButton = ({
   };
 
   const sizeClasses = {
-    small: "h-[40px] w-[40px] rounded-all-xl text-lg",
-    large: "h-[30px] w-[30px] rounded-all-10 text-base sm:h-[55px] sm:w-[55px] sm:rounded-all-2xl sm:text-2xl",
+    small: "h-[35px] w-[35px] rounded-all-xl text-md",
+    large: "h-[35px] w-[35px] rounded-all-10 text-base sm:h-[55px] sm:w-[55px] sm:rounded-all-2xl sm:text-2xl",
   };
 
   const getSizeClass = (size: IconButtonSize) => sizeClasses[size] || "";

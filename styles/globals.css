@@ -79,6 +79,10 @@ body {
   @apply rounded-[10px] before:rounded-[10px] after:rounded-[10px];
 }
 
+.rounded-all-15 {
+  @apply rounded-15 before:rounded-15 after:rounded-15;
+}
+
 .rounded-all-20 {
   @apply rounded-20 before:rounded-20 after:rounded-20;
 }

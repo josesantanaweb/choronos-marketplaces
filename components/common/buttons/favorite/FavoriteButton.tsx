@@ -21,8 +21,8 @@ const Favorite = ({
 }: FavoriteProps) => {
 
   const sizeClasses = {
-    small: "h-[40px] w-[40px] rounded-xl text-lg",
-    large: "h-[55px] w-[55px] rounded-20 text-xl",
+    small: "h-[35px] w-[35px] rounded-xl text-lg",
+    large:"h-[35px] w-[38px] rounded-all-10 text-base sm:h-[55px] sm:w-[55px] sm:rounded-all-2xl md:text-xl",
   };
 
   const getSizeClass = (size: FavoriteSize) => sizeClasses[size] || "";

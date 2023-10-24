@@ -16,24 +16,30 @@ const Activity = () => {
   return (
     <Fragment>
       <div className="flex items-start lg:items-center justify-between mb-6 flex-col lg:flex-row">
-        <h4 className="text-base lg:text-3xl text-white mb-4 lg:mb-0">Activity</h4>
+        <h4 className="text-base lg:text-3xl text-white mb-4 lg:mb-0">
+          Activity
+        </h4>
         <div className="w-full lg:w-1/3">
           <FilterBy setFilter={setFilter} />
         </div>
       </div>
       <div className="items mb-6">
         {listing.map((row, index) => (
-          <TableItem key={index} row={row} />
+          <TableItem key={index} row={row} compact={true} />
         ))}
       </div>
       <div className="flex justify-center mb-8">
-        <Link href="/" className="flex items-center gap-2 text-gray-400">
+        <Link
+          href="/"
+          className="flex items-center gap-2 text-gray-400 text-sm sm:text-base"
+        >
           See full activities
           <Image
             width={16}
             height={16}
             src={ArrowRightGradientIcon}
             alt="arrow-right"
+            className="w-4 h-4"
           />
         </Link>
       </div>

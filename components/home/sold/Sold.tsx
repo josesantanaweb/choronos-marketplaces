@@ -51,8 +51,8 @@ const RecentlySold = () => {
   }
 
   return (
-    <section className="py-10 md:container px-2.5 m-auto">
-      <h3 className="mb-8 md:mb-10 text-lg md:text-3xl font-medium text-white">
+    <section className="pt-10 md:container px-2.5 m-auto">
+      <h3 className="mb-7 md:mb-10 text-lg md:text-3xl font-medium text-white">
         Recently Sold
       </h3>
 

@@ -14,8 +14,8 @@ const HomeContent = () => {
       <Deals />
       <RecentlySold />
       <RecentListed />
-      {/* <Trade />
-      <Welcome /> */}
+      <Trade />
+      <Welcome />
     </>
   );
 };

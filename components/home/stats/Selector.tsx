@@ -17,8 +17,8 @@ const Selector = (props: ISelectorProps) => {
   const { options, onSelect, size = "default", value } = props;
 
   const classes = {
-    small: "h-[30px] text-xs leading-[15px] px-3",
-    default: "h-[38px] text-sm leading-[17px]",
+    small: "sm:h-[30px] sm:text-xs sm:leading-[15px] sm:px-3",
+    default: "sm:h-[38px] sm:text-sm sm:leading-[17px]",
   };
 
   return (

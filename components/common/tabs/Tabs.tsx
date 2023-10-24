@@ -31,7 +31,7 @@ const Tabs = (props: ITabsProps) => {
 
   return (
     <div
-      className={`w-full gap-4 p-2 item-cennter grid bg-purple-dark-600 rounded-3xl ${classes} ${className}`}
+      className={`w-full gap-4 p-2 item-center grid bg-purple-dark-600 rounded-3xl ${classes} ${className}`}
     >
       {options.map((option, index) => (
         <Button

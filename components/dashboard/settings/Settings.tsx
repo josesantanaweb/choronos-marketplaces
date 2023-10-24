@@ -25,8 +25,8 @@ const Favorites = () => {
 
   return (
     <div className="settings">
-      <div className="flex items-center justify-between mb-6">
-        <h4 className="mb-4 text-2xl text-white">Settings</h4>
+      <div className="flex items-center justify-between mb-6 flex-wrap">
+        <h4 className="mb-4 text-base lg:text-2xl text-white">Settings</h4>
         <div className="flex items-center gap-4">
           <FavoriteButton
             isFavorite={isFavorite}
@@ -44,7 +44,7 @@ const Favorites = () => {
         </div>
       </div>
       <h4 className="mb-4 text-lg text-white">Profile</h4>
-      <div className="grid grid-cols-2 gap-5 mb-6">
+      <div className="grid md:grid-cols-2 gap-5 mb-6">
         <Input
           placeholder="Short Name"
           name="shortName"
@@ -58,7 +58,7 @@ const Favorites = () => {
           onChange={() => ({})}
         />
       </div>
-      <div className="grid grid-cols-2 gap-5 mb-6">
+      <div className="grid md:grid-cols-2 gap-5 mb-6">
         <Upload
           onChange={handleChangeAvatar}
           label="Avatar"
@@ -90,7 +90,7 @@ const Favorites = () => {
           onChange={() => ({})}
         />
       </div>
-      <div className="grid grid-cols-2 gap-5 mb-6">
+      <div className="grid md:grid-cols-2 gap-5 mb-6">
         <Input
           placeholder="Twitter"
           name="twitter"
@@ -104,7 +104,7 @@ const Favorites = () => {
           onChange={() => ({})}
         />
       </div>
-      <div className="grid grid-cols-2 gap-5 mb-6">
+      <div className="grid md:grid-cols-2 gap-5 mb-6">
         <Input
           placeholder="Youtube"
           name="youtube"
@@ -118,7 +118,7 @@ const Favorites = () => {
           onChange={() => ({})}
         />
       </div>
-      <div className="grid grid-cols-2 gap-5 mb-6">
+      <div className="grid md:grid-cols-2 gap-5 mb-6">
         <Input
           placeholder="Medium"
           name="medium"
@@ -133,10 +133,10 @@ const Favorites = () => {
         />
       </div>
       <div className="grid grid-cols-2 gap-5">
-        <div className="flex justify-end">
+        <div className="flex md:justify-end">
           <Button>Save Changes</Button>
         </div>
-        <div className="flex justify-start">
+        <div className="flex justify-end md:justify-start">
           <Button variant="secondary">Restort Settings</Button>
         </div>
       </div>

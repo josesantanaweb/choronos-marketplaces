@@ -32,7 +32,7 @@ const Stats = () => {
         />
       </div>
 
-      <div className="w-full max-w-[310px] xl:w-3/5 md:max-w-none mx-auto mt-5 gap-14">
+      <div className="w-full max-w-[310px] xl:w-3/5 md:max-w-none mx-auto mt-2.5 md:mt-5 gap-14">
         <Swiper
           onSwiper={(swiper: any) => {
             swiperRef.current = swiper;

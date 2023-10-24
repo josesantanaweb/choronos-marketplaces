@@ -25,19 +25,23 @@ const Listings = () => {
           numberTabs={3}
         />
       </div>
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4 mb-6">
         {recently.map((nft, index: number) => (
           <Card nft={nft} key={index} />
         ))}
       </div>
       <div className="flex justify-center mb-8">
-        <Link href="/" className="flex items-center gap-2 text-gray-400">
+        <Link
+          href="/"
+          className="flex items-center gap-2 text-gray-400 text-sm sm:text-base"
+        >
           See all tokens
           <Image
             width={16}
             height={16}
             src={ArrowRightGradientIcon}
             alt="arrow-right"
+            className="w-4 h-4"
           />
         </Link>
       </div>

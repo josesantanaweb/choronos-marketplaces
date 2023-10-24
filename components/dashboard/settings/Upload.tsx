@@ -27,13 +27,13 @@ const Upload = (props: IUploadProps) => {
           alt="avatar"
           width={100}
           height={100}
-          className={`${isCover ? 'rounded-xl' : 'rounded-full'} w-28 h-28`}
+          className={`${isCover ? 'rounded-xl' : 'rounded-full'} w-20 h-20 md:w-28 md:h-28`}
         />
-        <div className="w-3/5 flex flex-col justify-center items-center">
+        <div className="md:w-3/5 flex flex-col justify-center items-center">
           <h5 className="text-white text-sm mb-3">{description}</h5>
           <label
             htmlFor={label}
-            className="before-gradient-purple-100 after-gradient-purple-200-on-hover flex relative cursor-pointer items-center justify-center text-white border-none overflow-hidden w-fit px-12 h-14 text-base rounded-all-2xl"
+            className="before-gradient-purple-100 after-gradient-purple-200-on-hover flex relative cursor-pointer items-center justify-center text-white border-none overflow-hidden w-fit px-8 md:px-12 h-9 md:h-14 text-sm md:text-base rounded-full"
           >
             <span className="flex items-center gap-3 z-30">
               <FiUpload size={16} />
