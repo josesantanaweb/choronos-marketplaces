@@ -19,8 +19,8 @@ const Offers = () => {
 
   return (
     <div className="offers w-full">
-      <div className="flex items-center justify-between mb-6">
-        <h4 className="mb-4 text-2xl text-white">Offers</h4>
+      <div className="flex items-center justify-between mb-6 flex-wrap">
+        <h4 className="mb-4 text-base lg:text-2xl text-white">Offers</h4>
         <div className="flex items-center gap-4">
           <FavoriteButton
             isFavorite={isFavorite}

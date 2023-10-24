@@ -22,6 +22,8 @@ const TableItem = (props: ITableItemProps) => {
 
   const handleOpen = () => setOpen(!open);
 
+  const openClass = !open ? "hidden md:grid" : "grid"
+
   if (compact) {
     return (
       <div className="flex md:gap-10 items-center flex-wrap lg:flex-nowrap py-2 px-3 md:px-6 bg-purple-dark-500 rounded-2xl mb-4 last:mb-0 hover:bg-purple-dark-300">
@@ -35,9 +37,7 @@ const TableItem = (props: ITableItemProps) => {
               className="rounded-xl w-14 h-14"
             />
             <div className="px-3 overflow-hidden">
-              <h4 className="text-sm text-white truncate">
-                Chronos Key #0001
-              </h4>
+              <h4 className="text-sm text-white truncate">Chronos Key #0001</h4>
               <p className="text-xs text-purple-chronos truncate">
                 {row?.name}
               </p>
@@ -67,9 +67,7 @@ const TableItem = (props: ITableItemProps) => {
           </div>
         </div>
         <div
-          className={`items-center grid-cols-2 gap-3 md:grid-cols-4 w-full lg:w-2/3 mt-4 md:mt-0 ${
-            !open ? "hidden md:grid" : "grid"
-          }`}
+          className={`items-center grid-cols-2 gap-3 md:grid-cols-4 w-full lg:w-2/3 mt-4 md:mt-0 ${openClass}`}
         >
           <div className="flex items-center gap-3">
             <Image

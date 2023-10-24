@@ -56,7 +56,7 @@ const Favorites = () => {
       <Collection />
       <div className="my-3">
         <h4 className="text-base lg:text-2xl text-white mb-4">Items</h4>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4">
           {recently.map((nft, index: number) => (
             <Card nft={nft} key={index} />
           ))}

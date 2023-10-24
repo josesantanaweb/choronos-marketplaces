@@ -25,7 +25,7 @@ const Activity = () => {
       </div>
       <div className="items mb-6">
         {listing.map((row, index) => (
-          <TableItem key={index} row={row} compact={true} />
+          <TableItem key={index} row={row} />
         ))}
       </div>
       <div className="flex justify-center mb-8">
