@@ -10,7 +10,7 @@ import Chronos from "@/assets/components/footer/logo-isotipe.png";
 const Footer = () => {
   return (
     <footer>
-      <div className="container flex items-center justify-between py-8 m-auto flex-col md:flex-row">
+      <div className="global-container flex items-center justify-between py-8 flex-col md:flex-row">
         <div className="flex items-center gap-4 mb-6 md:mb-0">
           <Image src={Chronos} width="55" height="55" alt="logo" />
           <div>

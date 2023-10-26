@@ -21,7 +21,7 @@ const NFTSection = () => {
     <div className="global-container mb-6 md:mb-12">
       <div className="flex gap-8 flex-wrap md:flex-nowrap">
         {NFTSelected === "chrNFT" ? (
-          <div className="relative w-full md:w-1/3">
+          <div className="relative w-full md:w-[890px]">
             <video
               src="/videos/key.mp4"
               loop

@@ -85,10 +85,8 @@ const Deal = (props: IDealProps) => {
         className="w-14 h-14"
       />
       <div className="px-3 overflow-hidden">
-        <h4 className="text-sm text-white truncate">Chronos Key #0001</h4>
-        <p className="text-xs text-gradient-purple-100 truncate">
-          {name}
-        </p>
+        <h4 className="text-sm text-white truncate">Lost keys of chronos</h4>
+        <p className="text-xs text-gradient-purple-100 truncate">{name}</p>
       </div>
     </div>
   );
@@ -180,7 +178,7 @@ const TableItem = (props: ITableItemProps) => {
             />
             <div className="overflow-hidden">
               <h4 className="text-sm md:text-base text-white">Offered by</h4>
-              <p className="text-xs text-gradient-purple-100 truncate">
+              <p className="text-xs md:text-md text-gradient-purple-100 truncate">
                 0xa1b2c3d4e5454
               </p>
             </div>
@@ -195,7 +193,7 @@ const TableItem = (props: ITableItemProps) => {
             />
             <div className="overflow-hidden">
               <h4 className="text-sm md:text-base text-white">Offered to</h4>
-              <p className="text-xs text-gradient-purple-100 truncate">
+              <p className="text-xs md:text-md text-gradient-purple-100 truncate">
                 0xa1b2c3d4e54645
               </p>
             </div>
@@ -249,7 +247,7 @@ const TableItem = (props: ITableItemProps) => {
             />
             <div className="overflow-hidden">
               <h4 className="text-xs block md:hidden">From</h4>
-              <p className="text-xs text-gradient-purple-100 truncate">
+              <p className="text-xs md:text-md text-gradient-purple-100 truncate">
                 0xa1b2c3d4e5454
               </p>
             </div>
@@ -267,7 +265,7 @@ const TableItem = (props: ITableItemProps) => {
               <h4 className="text-sm md:text-base text-white block md:hidden">
                 To
               </h4>
-              <p className="text-xs text-gradient-purple-100 truncate">
+              <p className="text-xs md:text-md text-gradient-purple-100 truncate">
                 0xa1b2c3d4e54645
               </p>
             </div>

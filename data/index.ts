@@ -1,4 +1,4 @@
-export const menu = ['dev', 'about'];
+export const menu = ['DEX', 'About'];
 
 export const menuUser = [
   {
@@ -26,21 +26,21 @@ export const menuUser = [
 export const stats = [
   {
     title: "veCHR",
-    last_week_sales: 13837,
-    total_trade: 43837,
-    list_trade: 641,
+    last_week_sales: "13,837",
+    total_trade: "43,837",
+    list_trade: "641",
   },
   {
     title: "chrNFT",
-    last_week_sales: 12837,
-    total_trade: 65837,
-    list_trade: 211,
+    last_week_sales: "12,837",
+    total_trade: "65,837",
+    list_trade: "211",
   },
   {
     title: "maNFT",
-    last_week_sales: 15837,
-    total_trade: 44837,
-    list_trade: 841,
+    last_week_sales: "15,837",
+    total_trade: "44,837",
+    list_trade: "841",
   },
 ];
 

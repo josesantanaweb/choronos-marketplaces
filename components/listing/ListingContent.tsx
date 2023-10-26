@@ -120,7 +120,7 @@ const ListingContent = () => {
     <div className="py-14">
       <div className="relative">
         <div className="absolute w-full h-[450px] bg-mountains"></div>
-        <div className="md:container px-2.5 mx-auto relative z-30">
+        <div className="global-container relative z-30">
           <div className="flex justify-between gap-5 sm:gap-8 flex-col xl:flex-row">
             <ListingNFT
               NFTSelected={NFTSelected}
@@ -135,7 +135,7 @@ const ListingContent = () => {
           </div>
         </div>
       </div>
-      <div ref={ref} className="md:container px-2.5 mx-auto pt-14">
+      <div ref={ref} className="global-container pt-14">
         {!showActivity && (
           <>
             <div className="flex md:items-center justify-between mx-auto mb-10 md:mb-11 flex-col md:flex-row">

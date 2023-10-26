@@ -12,7 +12,7 @@ const Offered = () => {
   const [filter, setFilter] = useState<string>("");
   return (
     <div className="offered">
-      <div className="flex items-center gap-5 mb-5 flex-col md:flex-wrap">
+      <div className="flex items-center gap-5 mb-5 flex-col md:flex-row">
         <div className="w-full md:w-7/12">
           <SearchBar />
         </div>

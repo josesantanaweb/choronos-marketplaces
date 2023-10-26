@@ -27,7 +27,7 @@ const Charts = () => {
   };
 
   return (
-    <div className="flex gap-8 flex-wrap">
+    <div className="flex gap-8 flex-wrap md:flex-nowrap">
       <BarChart
         title="Listings"
         data={listingData}

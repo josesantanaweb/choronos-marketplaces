@@ -17,7 +17,7 @@ const Header = () => {
   const [isLogged, setIsLogged] = useState<boolean>(false);
 
   return (
-    <header className="bg-[#1a1924] md:bg-transparent md:container flex items-center justify-center gap-2 lg:gap-4 py-3.5 md:py-8 px-2.5 m-auto flex-col-reverse md:flex-row relative z-50">
+    <header className="global-container bg-[#1a1924] md:bg-transparent flex items-center justify-center gap-2 lg:gap-4 md:py-8 flex-col-reverse md:flex-row relative z-50">
       <Logo className="md:block hidden" />
       <Menu menu={menu}/>
 
