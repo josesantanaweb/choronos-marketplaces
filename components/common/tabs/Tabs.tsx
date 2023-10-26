@@ -11,7 +11,7 @@ export interface ITabsProps {
 }
 
 const Tabs = (props: ITabsProps) => {
-  const { selected, setSelected, options, numberTabs, className } = props;
+  const { selected, setSelected, options, numberTabs, className = '' } = props;
 
   const handleSelected = (option: string) => setSelected(option);
 
@@ -31,7 +31,7 @@ const Tabs = (props: ITabsProps) => {
 
   return (
     <div
-      className={`w-full gap-4 p-2 item-center grid bg-purple-dark-600 rounded-3xl ${classes} ${className}`}
+      className={`w-full gap-1.5 sm:gap-4 sm:p-2 item-center grid sm:bg-purple-dark-600 rounded-3xl ${classes} ${className}`}
     >
       {options.map((option, index) => (
         <Button

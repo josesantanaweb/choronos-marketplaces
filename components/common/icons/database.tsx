@@ -39,7 +39,7 @@ const DatabaseIcon = (props: IIconProps) => {
             : ""
         } ${
           gradientTransition
-            ? "transition-opacity duration-300 ease-linear"
+            ? "transition-opacity"
             : ""
         } icon`}
       />
@@ -55,7 +55,7 @@ const DatabaseIcon = (props: IIconProps) => {
             : "opacity-0"
         } ${
           gradientTransition
-            ? "transition-opacity duration-300 ease-linear"
+            ? "transition-opacity"
             : ""
         } icon_gradient`}
       />

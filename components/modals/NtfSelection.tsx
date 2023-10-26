@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 
-import { TrashIcon, XCircleIcon } from "@/components/common/icons";
+import { FiTrash } from "react-icons/fi";
+
+import { XCircleIcon } from "@/components/common/icons";
 
 import Modal from "@/components/common/modal/Modal";
 import SelectorDropdown from "@/components/modals/components/SelectorDropdown";
@@ -64,16 +66,16 @@ const NTFSelectionModal = (props: INTFSelectionProps) => {
     >
       <div className="h-[1px] sm:h-[2px] rounded-full bg-[#717AC4] my-[19px] sm:my-[25px]" />
 
-      <div className={selected ? "mb-5" : ""}>
-        <div className="flex justify-between items-center mb-5">
-          <h2 className="text-lg leading-none">Select your NFT</h2>
+      <div className={selected ? "mb-4 sm:mb-5" : ""}>
+        <div className="flex justify-between items-center mb-3.5 sm:mb-5">
+          <h2 className="text-md sm:text-lg leading-none">Select your NFT</h2>
 
           <button
-            className="text-sm leading-none flex items-center gap-[6px] opacity-60 hover:opacity-100 transition-opacity duration-300 ease-linear"
+            className="text-xs sm:text-sm leading-none flex items-center gap-[6px] opacity-60 hover:opacity-100 transition-opacity"
             onClick={() => setSelected(null)}
           >
-            <span>
-              <TrashIcon size={16} />
+            <span className="sm:text-base">
+              <FiTrash />
             </span>
             <span>Clear Selection</span>
           </button>
@@ -91,16 +93,19 @@ const NTFSelectionModal = (props: INTFSelectionProps) => {
 
       {selected && (
         <>
-          <div className="mb-5">
-            <div className="mb-5">
-              <h2 className="text-lg leading-none">Your Selection</h2>
+          <div className="mb-2 sm:mb-5">
+            <div className="mb-3.5 sm:mb-5">
+              <h2 className="text-md sm:text-lg leading-none">
+                Select your NFT
+              </h2>
             </div>
+
             <NTFSimple
               image={selected.image}
               size="small"
               title={selected.title}
               subtitle={selected.subtitle}
-              iconButton={<XCircleIcon size={20} />}
+              iconButton={<XCircleIcon />}
               onClickButton={() => {
                 setSelected(null);
               }}
@@ -111,6 +116,6 @@ const NTFSelectionModal = (props: INTFSelectionProps) => {
       )}
     </Modal>
   );
-}
+};
 
 export default NTFSelectionModal;

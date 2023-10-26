@@ -12,18 +12,10 @@ import { recently } from "@/data";
 const Suggested = () => {
 
   const swiperRef: any = useRef();
-  const slidesPerView = 5;
-
-  if (slidesPerView * 2 > recently.length) {
-    const maxItemsToAdd = slidesPerView * 2 - recently.length;
-    for (let i = 0; i < maxItemsToAdd; i++) {
-      recently.push(recently[i]);
-    }
-  }
 
   return (
     <div>
-      <h3 className="text-white text-2xl mb-6">
+      <h3 className="text-white text-base md:text-2xl mb-6">
         More from the lost Keys of Chronos..
       </h3>
       <Swiper
@@ -36,13 +28,13 @@ const Suggested = () => {
           disableOnInteraction: false,
         }}
         loop={true}
-        slidesPerView={slidesPerView}
+        slidesPerView="auto"
         spaceBetween={20}
         modules={[Autoplay]}
-        className="container grid grid-cols-5 items-center gap-4 mx-auto"
+        className="container grid grid-cols-1 md:grid-cols-5 items-center gap-4 mx-auto"
       >
         {recently.map((nft, index) => (
-          <SwiperSlide key={index}>
+          <SwiperSlide key={index} className="!w-auto">
             <Card nft={nft} />
           </SwiperSlide>
         ))}

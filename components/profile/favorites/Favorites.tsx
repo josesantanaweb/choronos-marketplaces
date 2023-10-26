@@ -12,16 +12,16 @@ const Favorites = () => {
   const [filter, setFilter] = useState<string>("");
   return (
     <div className="offers">
-      <h4 className="text-white text-2xl mb-4">User Favorites</h4>
-      <div className="flex items-center gap-5 mb-5">
-        <div className="w-7/12">
+      <h4 className="text-white text-base lg:text-2xl mb-4">User Favorites</h4>
+      <div className="flex items-center gap-5 mb-5 flex-col md:flex-row">
+        <div className="w-full md:w-7/12">
           <SearchBar />
         </div>
-        <div className="w-5/12">
+        <div className="w-full md:w-5/12">
           <FilterBy setFilter={setFilter} />
         </div>
       </div>
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4">
         {recently.map((nft, index: number) => (
           <Card nft={nft} key={index} />
         ))}

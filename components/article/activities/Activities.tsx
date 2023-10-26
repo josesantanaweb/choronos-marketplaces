@@ -15,9 +15,9 @@ const Activities = () => {
   const [filter, setFilter] = useState<string>("");
   return (
     <div className="bg-purple-dark-900 mb-10 py-6">
-      <div className="container mx-auto relative z-30">
-        <div className="flex justify-between items-center mb-6">
-          <div className="w-1/3">
+      <div className="md:container mx-auto relative px-2.5 md:px-0 z-30">
+        <div className="flex justify-between items-center mb-6 flex-col md:flex-row">
+          <div className="w-full md:w-1/3 mb-4 md:mb-0">
             <Tabs
               options={options}
               selected={selected}
@@ -25,7 +25,7 @@ const Activities = () => {
               numberTabs={2}
             />
           </div>
-          <div className="w-1/3">
+          <div className="w-full md:w-1/3">
             <FilterBy setFilter={setFilter} />
           </div>
         </div>

@@ -31,15 +31,15 @@ const Listing = () => {
 
   return (
     <div className="offers">
-      <div className="flex items-center gap-5 mb-5">
-        <div className="w-7/12">
+      <div className="flex items-center gap-5 mb-5 flex-col md:flex-row">
+        <div className="w-full md:w-7/12">
           <SearchBar />
         </div>
-        <div className="w-5/12">
+        <div className="w-full md:w-5/12">
           <FilterBy setFilter={setFilter} />
         </div>
       </div>
-      <div className="flex items-center w-full gap-5 mt-6">
+      <div className="flex items-center w-full gap-5 mt-6 flex-wrap">
         <BarChart
           title="Listings"
           data={listingData}

@@ -58,7 +58,7 @@ const EditListingModal = (props: IEditListingProps) => {
           <h2 className="text-lg leading-none">Confirm your Purchase</h2>
 
           <button
-            className="text-sm leading-none flex items-center gap-[6px] opacity-60 hover:opacity-100 transition-opacity duration-300 ease-linear"
+            className="text-sm leading-none flex items-center gap-[6px] opacity-60 hover:opacity-100 transition-opacity"
             onClick={() => {}}
           >
             <span>
@@ -78,7 +78,7 @@ const EditListingModal = (props: IEditListingProps) => {
             alt="Ethereum"
           />
           <input
-            className="w-full h-10 bg-blue-chronos-900 border-none outline-none text-white placeholder:opacity-50 placeholder:text-white hover:placeholder:opacity-100 focus:placeholder:opacity-100 placeholder:transition-opacity placeholder:duration-300 placeholder:ease-linear px-4 py-2.5 rounded-2xl text-base [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+            className="w-full h-10 bg-blue-chronos-900 border-none outline-none text-white placeholder:opacity-50 placeholder:text-white hover:placeholder:opacity-100 focus:placeholder:opacity-100 placeholder:transition-opacity px-4 py-2.5 rounded-2xl text-base [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
             type="number"
             value={ethPrice ? ethPrice : ""}
             placeholder="0.00"

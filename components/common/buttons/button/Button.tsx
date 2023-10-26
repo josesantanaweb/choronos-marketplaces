@@ -39,7 +39,7 @@ const Button = ({
 
   const sizeClasses = {
     xsmall: "px-6 h-7 text-xs rounded-all-full",
-    small: "h-7 px-6 text-xs sm:h-9 sm:text-sm rounded-all-lg",
+    small: "h-7 px-3 sm:px-6 text-xs sm:h-9 sm:text-sm rounded-all-lg",
     large: "h-9 sm:h-14 text-xs sm:text-base rounded-full px-8 sm:px-12",
   };
 

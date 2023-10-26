@@ -37,7 +37,7 @@ const FilteBy = (props: IFilteByProps) => {
   return (
     <div
       ref={ref}
-      className={`relative bg-purple-dark-700 text-white text-xs md:text-sm w-full select-none before:absolute before:content-[''] before:top-0 before:left-0 before:w-full before:h-full before:bg-white before:opacity-60 before:mix-blend-overlay before:transition-opacity before:duration-300 before:ease-linear before:rounded-20 before:z-10 hover:before:opacity-60 ${
+      className={`relative bg-purple-dark-700 text-white text-xs md:text-sm w-full select-none before:absolute before:content-[''] before:top-0 before:left-0 before:w-full before:h-full before:bg-white before:opacity-60 before:mix-blend-overlay before:transition-opacity before:rounded-20 before:z-10 hover:before:opacity-60 ${
         isVisible ? "before:opacity-100" : ""
       }`}
       onClick={() => setIsVisible(!isVisible)}
@@ -60,7 +60,7 @@ const FilteBy = (props: IFilteByProps) => {
         </div>
 
         <div
-          className={`ml-auto transition-transform duration-300 ease-linear text-base md:text-xl ${
+          className={`ml-auto transition-transform text-base md:text-xl ${
             isVisible ? "rotate-180" : ""
           }`}
         >

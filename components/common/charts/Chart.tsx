@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import * as d3 from "d3";
 
 import { leadingZero } from "@/utils/leading-zero";
@@ -7,6 +7,9 @@ import {
   ICurrency,
   IOptionsFormatNumber,
 } from "@/utils/format-number";
+
+import useWindowsSize from "@/hooks/useWindowSize";
+import useElementSize from "@/hooks/useElementSize";
 
 interface IChartProps {
   data: [number, number][];
@@ -677,7 +680,7 @@ export function Chart(props: IChartProps) {
     height = 348,
     type,
     currency,
-    isMobile,
+    isMobile = false,
     tooltipValueFormatOptions = null,
   } = props;
 
@@ -863,10 +866,10 @@ export function Chart(props: IChartProps) {
         .on("pointerleave", pointerleft)
         .on("touchstart", (event: Event) => event.preventDefault());
     }
-  }, [type]);
+  }, [type, width, height]);
 
   return (
-    <div className="relative z-0">
+    <div className="relative z-0" key={`${width}-${height}`}>
       <svg
         ref={svgRef}
         className={`w-full`}

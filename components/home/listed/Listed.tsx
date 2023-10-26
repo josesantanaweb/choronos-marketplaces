@@ -18,7 +18,7 @@ const RecentListed = () => {
           <FilteBy setFilter={setFilter} />
         </div>
       </div>
-      <div className="grid items-center justify-items-center mx-auto mb-7 md:mb-10 gap-5 sm:gap-8 grid-cols-1 xxs:grid-cols-2 xs:grid-cols-3 sm:grid-cols-4 md:grid-cols-3 lgMax:grid-cols-4 1xl:grid-cols-5 2xl:grid-cols-6">
+      <div className="grid items-center justify-items-center mx-auto mb-7 md:mb-10 gap-5 sm:gap-8 grid-cols-1 xxs:grid-cols-2 xs:grid-cols-3 sm:grid-cols-2 md:grid-cols-3 lgMax:grid-cols-4 1xl:grid-cols-5 2xl:grid-cols-6">
         {recently.map((nft, index) => (
           <Card nft={nft} key={index} />
         ))}

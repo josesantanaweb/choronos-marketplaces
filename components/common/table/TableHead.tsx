@@ -4,7 +4,7 @@ import React from "react";
 
 const TableHead = () => {
   return (
-    <div className="grid grid-cols-6 items-center py-4 px-6">
+    <div className="grid-cols-6 items-center py-4 px-6 hidden md:grid">
       <span className="text-white">Type</span>
       <span className="text-white">Items</span>
       <span className="text-white">Price</span>

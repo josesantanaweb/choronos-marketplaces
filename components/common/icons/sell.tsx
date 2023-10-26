@@ -34,7 +34,7 @@ const SellIcon = (props: IIconProps) => {
             : ""
         } ${
           gradientTransition
-            ? "transition-opacity duration-300 ease-linear"
+            ? "transition-opacity"
             : ""
         } icon`}
       />
@@ -51,7 +51,7 @@ const SellIcon = (props: IIconProps) => {
               : "opacity-0"
           } ${
             gradientTransition
-              ? "transition-opacity duration-300 ease-linear"
+              ? "transition-opacity"
               : ""
           } icon_gradient`}
         />

@@ -19,7 +19,7 @@ const ArticleContent = () => {
         <div className="absolute w-full h-[600px] bg-mountains"></div>
         <div className="relative z-40">
           <NFTSection />
-          <div className="container mx-auto relative z-30">
+          <div className="md:container mx-auto relative z-30 px-2.5 md:px-0">
             <Tabs
               options={options}
               selected={selected}

@@ -39,7 +39,7 @@ const ActivityContent = () => {
 
   return (
     <>
-      <div className="mt-6 w-[73%]">
+      <div className="mt-6 w-full md:w-[73%]">
         <Tabs
           numberTabs={5}
           selected={activityTab}
@@ -51,7 +51,7 @@ const ActivityContent = () => {
         {TabsContent[activityTab]}
       </div>
       <div className="w-full my-6">
-        <h3 className="text-white text-xl mb-4">Activities</h3>
+        <h3 className="text-white text-base md:text-xl mb-4">Activities</h3>
         <TableHead />
         {TabsData[activityTab].map((row: any, index: number) => (
           <TableItem key={index} row={row} />

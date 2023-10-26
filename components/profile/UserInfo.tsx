@@ -11,7 +11,7 @@ import World from "@/assets/icons/gradiants/world.svg";
 
 const UserInfo = () => {
   return (
-    <div className="w-[25%] p-6 mt-6 bg-purple-dark-900 rounded-3xl">
+    <div className="w-full md:w-[25%] p-6 mt-6 bg-purple-dark-900 rounded-3xl hidden md:block">
       <div className="flex flex-col items-center justify-center mb-4">
         <Image
           src={Avatar}

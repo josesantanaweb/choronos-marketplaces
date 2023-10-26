@@ -67,7 +67,7 @@ const SwiperPagination = (props: ISwiperPaginationProps) => {
       {Array.from({ length: props.count }).map((_, index) => (
         <div
           key={index}
-          className={`cursor-pointer absolute w-[27px] h-[6px] rounded-all-full bg-white bg-opacity-10 after-gradient-purple-100 after:opacity-0 transition-all duration-300 ease-[cubic-bezier(0.24,0.68,0.57,1.15)] ${
+          className={`cursor-pointer absolute w-[27px] h-[6px] rounded-all-full bg-white bg-opacity-10 after-gradient-purple-100 after:opacity-0 transition-all ease-[cubic-bezier(0.24,0.68,0.57,1.15)] ${
             0 === index ? "after:opacity-100 w-[36px]" : ""
           }`}
           onClick={() => {

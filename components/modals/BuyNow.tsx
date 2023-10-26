@@ -48,7 +48,7 @@ export default function BuyNowModal(props: IBuyNowProps) {
           <h2 className="text-lg leading-none">Confirm your Purchase</h2>
 
           <button
-            className="text-sm leading-none flex items-center gap-[6px] opacity-60 hover:opacity-100 transition-opacity duration-300 ease-linear"
+            className="text-sm leading-none flex items-center gap-[6px] opacity-60 hover:opacity-100 transition-opacity"
             onClick={() => {}}
           >
             <span>

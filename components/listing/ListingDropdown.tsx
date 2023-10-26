@@ -27,19 +27,19 @@ const ListingDropdown = (props: IListingDropdownProps) => {
 
   return (
     <div className={twMerge("relative", className)} ref={ref}>
-      <h3
-        className="flex items-center justify-between gap-3 text-3xl text-white cursor-pointer"
+      <h1
+        className="flex items-center justify-between gap-1 lg:gap-3 text-lg lg:text-3xl text-white cursor-pointer font-medium"
         onClick={() => setIsVisible(!isVisible)}
       >
         Chronos {selected}
         <div
-          className={`mb-1 transition-transform duration-300 ease-linear ${
+          className={`lg:mb-1 transition-transform text-md lg:text-xs ${
             isVisible ? "rotate-180" : ""
           }`}
         >
-          <FaChevronDown size={12} className="mb-1" />
+          <FaChevronDown className="sm:mb-1" />
         </div>
-      </h3>
+      </h1>
       <AnimatePresence>
         {isVisible && (
           <motion.ul
@@ -47,13 +47,13 @@ const ListingDropdown = (props: IListingDropdownProps) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="absolute z-40 w-full p-4 top-full rounded-3xl rounded-t-none backdrop-blur-[12.5px] bg-gradient-gray-100"
+            className="absolute z-40 w-full p-2.5 lg:p-4 top-full rounded-3xl rounded-t-none backdrop-blur-[12.5px] bg-gradient-gray-100"
           >
             {options.map((option, index) => (
               <li
                 key={index}
                 onClick={() => handleSelected(option)}
-                className="relative flex items-center justify-center px-5 py-3 mb-3 last:mb-0 text-sm text-white list-none cursor-pointer bg-purple-dark-200 bg-opacity-60 rounded-all-2xl after-gradient-purple-100-on-hover"
+                className="relative flex items-center justify-center px-5 py-1.5 lg:py-3 mb-3 last:mb-0 text-xs lg:text-sm text-white list-none cursor-pointer bg-purple-dark-200 bg-opacity-60 rounded-all-2xl after-gradient-purple-100-on-hover"
               >
                 <span className="relative z-40">Chronos {option}</span>
               </li>

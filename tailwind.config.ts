@@ -8,6 +8,12 @@ const config: Config = {
     "./layouts/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    transitionDuration: {
+      DEFAULT: "300ms",
+    },
+    transitionTimingFunction: {
+      DEFAULT: "linear",
+    },
     screens: {
       xxs: "320px",
 

@@ -76,7 +76,7 @@ function InputETH(props: IInputETHProps) {
     <div className="flex items-center gap-2.5 max-w-[208px]">
       <Image src="/images/ethereum.png" width={36} height={36} alt="Ethereum" />
       <input
-        className="w-full h-10 bg-blue-chronos-900 border-none outline-none text-white placeholder:opacity-50 placeholder:text-white hover:placeholder:opacity-100 focus:placeholder:opacity-100 placeholder:transition-opacity placeholder:duration-300 placeholder:ease-linear px-4 py-2.5 rounded-2xl text-base"
+        className="w-full h-10 bg-blue-chronos-900 border-none outline-none text-white placeholder:opacity-50 placeholder:text-white hover:placeholder:opacity-100 focus:placeholder:opacity-100 placeholder:transition-opacity px-4 py-2.5 rounded-2xl text-base"
         placeholder="0"
         type="number"
         min={0}

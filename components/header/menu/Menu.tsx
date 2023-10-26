@@ -33,8 +33,8 @@ const MenuItem = (props: IMenuItemProps) => {
     after:h-full
     after:opacity-0
     after:transition-opacity
-    after:duration-300
-    after:ease-linear
+   
+   
     after:bg-gradient-purple-100
     hover:after:opacity-100
   `;

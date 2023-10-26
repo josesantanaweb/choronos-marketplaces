@@ -104,7 +104,7 @@ const SellNFTModal = (props: ISellNFTProps) => {
                 />
                 <div className="leading-none">
                   <input
-                    className={`[appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none bg-transparent p-0 w-full h-[24px] placeholder:text-white mb-1 transition-opacity duration-300 ${
+                    className={`[appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none bg-transparent p-0 w-full h-[24px] placeholder:text-white mb-1 transition-opacity ${
                       usdPrice ? "opacity-100" : "opacity-50 hover:opacity-100"
                     }`}
                     type="number"
@@ -119,7 +119,7 @@ const SellNFTModal = (props: ISellNFTProps) => {
                   />
                   <label className="inline-block group pt-0.5 pb-px px-3 bg-blue-chronos-900 rounded-2xl max-w-[96px]">
                     <div
-                      className={`flex items-center justify-center text-[12px] leading-none transition-opacity duration-300 ${
+                      className={`flex items-center justify-center text-[12px] leading-none transition-opacity ${
                         usdPrice
                           ? "opacity-100"
                           : "opacity-50 group-hover:opacity-100"

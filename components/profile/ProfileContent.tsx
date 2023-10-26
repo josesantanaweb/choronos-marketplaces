@@ -11,7 +11,7 @@ const ProfileContent = () => {
 
   return (
     <div className="relative w-full">
-      <div className="container mx-auto py-14">
+      <div className="md:container mx-auto px-2.5 md:px-0 py-14 relative">
         <FrontPage
           setIsFavorite={setIsFavorite}
           isFavorite={isFavorite}
@@ -19,9 +19,19 @@ const ProfileContent = () => {
           setActivity={setActivity}
         />
         {isActivity && !isFavorite ? (
-          <Activity />
+          <Activity
+            setIsFavorite={setIsFavorite}
+            isFavorite={isFavorite}
+            isActivity={isActivity}
+            setActivity={setActivity}
+          />
         ) : (
-          <Public isFavorite={isFavorite} />
+          <Public
+            setIsFavorite={setIsFavorite}
+            isFavorite={isFavorite}
+            isActivity={isActivity}
+            setActivity={setActivity}
+          />
         )}
       </div>
     </div>

@@ -3,6 +3,7 @@
 import { useState } from "react";
 
 import NFTCard from "./NFTCard";
+import NFTCardMobile from "./NFTCardMobile";
 import All from "./tabs/All";
 import Offers from "./tabs/Offers";
 import Bids from "./tabs/Bids";
@@ -18,6 +19,7 @@ const PublicContent = () => {
   return (
     <div className="nfts">
       <NFTCard />
+      <NFTCardMobile />
       <div className="mb-5">
         <Tabs selected={tabActive} setSelected={setTabActive} options={options} numberTabs={5}/>
       </div>

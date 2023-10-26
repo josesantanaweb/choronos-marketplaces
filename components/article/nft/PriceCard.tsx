@@ -9,9 +9,9 @@ import PayWithCHR from "@/components/common/pay-chr/PayCHR";
 
 const PriceCard = () => {
   return (
-    <div className="flex items-center rounded-3xl relative bg-purple-dark-600 mb-6 bg-opacity-60 px-8 py-6 justify-between">
-      <div className="cas">
-        <h4 className="text-2xl text-white mb-2">Actual Price</h4>
+    <div className="flex items-center rounded-3xl relative bg-purple-dark-600 mb-6 bg-opacity-60 px-8 py-6 justify-between flex-col md:flex-row">
+      <div className="mb-4 md:mb-0">
+        <h4 className="text-lg md:text-2xl text-white mb-2">Actual Price</h4>
         <div className="relative z-30 flex items-center gap-4 mb-3">
           <Image
             src={BNB}
@@ -21,7 +21,7 @@ const PriceCard = () => {
             className="w-10 h-10"
           />
           <div className="w-full">
-            <h3 className="text-xl text-white">5,56 ETH</h3>
+            <h3 className="text-lg md:text-xl text-white">5,56 ETH</h3>
             <p className="text-sm text-gray-400">($8,678.99)</p>
           </div>
         </div>
@@ -33,7 +33,7 @@ const PriceCard = () => {
         <Button full className="mb-3">
           Buy Now for 5.56 ETH
         </Button>
-        <Button full variant="secondary">
+        <Button full variant="secondary" className="mb-4">
           Make other offert
         </Button>
         <PayWithCHR />

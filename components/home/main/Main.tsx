@@ -25,7 +25,7 @@ const Main = () => {
             Trade Now
           </Button>
         </div>
-        <div className="relative bg-mountains before:left-1/2 before:-translate-x-1/2 before:w-[802.667px] before:h-[311.684px]">
+        <div className="relative bg-mountains before:left-1/2 before:-translate-x-1/2 before:w-[802.667px] before:h-[311.684px] md:before:w-screen">
           <Stats />
         </div>
       </div>

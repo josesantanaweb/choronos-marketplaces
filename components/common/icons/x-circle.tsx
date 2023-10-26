@@ -24,7 +24,7 @@ const XCircleIcon = (props: IIconProps) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={size}
+      width={size || '1em'}
       viewBox="0 0 16 16"
       fill="none"
     >
@@ -40,7 +40,7 @@ const XCircleIcon = (props: IIconProps) => {
               : ""
           } ${
             gradientTransition
-              ? "transition-opacity duration-300 ease-linear"
+              ? "transition-opacity"
               : ""
           } icon`}
         />
@@ -58,7 +58,7 @@ const XCircleIcon = (props: IIconProps) => {
               : "opacity-0"
           } ${
             gradientTransition
-              ? "transition-opacity duration-300 ease-linear"
+              ? "transition-opacity"
               : ""
           } icon_gradient`}
         />

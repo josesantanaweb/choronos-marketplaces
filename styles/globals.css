@@ -40,7 +40,7 @@ body {
 }
 
 .after-full {
-  @apply after:content-[''] after:absolute after:top-0 after:left-0 after:w-full after:h-full after:z-20 after:transition-opacity after:duration-300 after:ease-linear
+  @apply after:content-[''] after:absolute after:top-0 after:left-0 after:w-full after:h-full after:z-20 after:transition-opacity;
 }
 
 .before-none {
@@ -167,7 +167,9 @@ body {
   after:h-full
   after:opacity-90
   after:transition-opacity
-  after:duration-300
-  after:ease-linear
   after:bg-purple-dark-300
+}
+
+.text-gradient-purple-100 {
+  @apply text-transparent bg-gradient-purple-100 bg-clip-text webkit-text-fill-color-transparent;
 }

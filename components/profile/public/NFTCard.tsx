@@ -13,7 +13,7 @@ import FlameIcon from "@/assets/icons/gradiants/flame.svg";
 
 const NFTCard = () => {
   return (
-    <div className="flex items-center gap-5 overflow-hidden rounded-3xl mb-7 bg-purple-dark-900 h-52">
+    <div className="hidden md:flex items-center gap-5 overflow-hidden rounded-3xl mb-7 bg-purple-dark-900 h-52">
       <Image src={Art} alt="art" width={200} height={200} className="h-full" />
       <div className="flex items-center justify-between w-full p-4">
         <div className="w-2/3">
@@ -44,7 +44,7 @@ const NFTCard = () => {
               555
             </p>
           </div>
-          <Button full>Buy Now</Button>
+          <Button full className="mb-4">Buy Now</Button>
           <PayCHR onClick={() => ({})} />
         </div>
       </div>

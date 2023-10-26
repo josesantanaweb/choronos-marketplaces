@@ -41,28 +41,28 @@ const Card = (props: ICardProps) => {
         alt="nft"
         width={292}
         height={260}
-        className="w-full h-[158.04px] md:h-[280px] object-cover"
+        className="w-full h-[158.04px] sm:h-[280px] object-cover"
       />
 
-      <div className="p-2.5 md:p-4">
-        <h6 className="text-xs md:text-md font-medium line-clamp-1">{nft.name}</h6>
-        <p className="text-[10px] md:text-sm opacity-50 mb-2.5 line-clamp-1">
+      <div className="p-2.5 sm:p-4">
+        <h6 className="text-xs sm:text-sm font-medium line-clamp-1">{nft.name}</h6>
+        <p className="text-[10px] sm:text-sm opacity-50 mb-2.5 line-clamp-1">
           {nft.category}
         </p>
         <PriceInfo price={nft.price} />
       </div>
 
       <div
-        className={`absolute w-full bg-purple-dark-800 left-0 bottom-0 transition-opacity duration-300 ease-linear p-3 ${
+        className={`absolute w-full bg-purple-dark-800 left-0 bottom-0 transition-opacity p-3 ${
           viewInfo ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
       >
-        <h6 className="text-xs md:text-md font-medium">{nft.name}</h6>
-        <p className="text-[10px] md:text-sm opacity-50 mb-2.5">
+        <h6 className="text-xs sm:text-sm font-medium">{nft.name}</h6>
+        <p className="text-[10px] sm:text-sm opacity-50 mb-2.5">
           {nft.category}
         </p>
 
-        <div className="hidden md:block">
+        <div className="hidden sm:block">
           {nft.category === "Chronos maNFT" && (
             <>
               <div className="mb-4">

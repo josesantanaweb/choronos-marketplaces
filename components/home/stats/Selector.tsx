@@ -22,7 +22,7 @@ const Selector = (props: ISelectorProps) => {
   };
 
   return (
-    <div className="flex justify-center items-center gap-4">
+    <div className="flex justify-center items-center gap-1 md:gap-4">
       {options.map((option: ISelectorOptions, index: number) => (
         <Button
           key={index}

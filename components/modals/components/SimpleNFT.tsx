@@ -34,10 +34,16 @@ const SimpleNFT = (props: INTFSimpleProps) => {
       height: 126,
     },
   };
+
+  const imageClassBySize = {
+    small: "w-[64px] h-[73px] sm:w-[104.43px] sm:h-[120px]",
+    default: "w-[110px] h-[126px]",
+  }
+
   const fontSizeBySize = {
     small: {
-      title: "text-xl",
-      subtitle: "text-sm",
+      title: "text-base sm:text-xl",
+      subtitle: "text-xs md:text-sm",
     },
     default: {
       title: "text-[22px]",
@@ -45,23 +51,23 @@ const SimpleNFT = (props: INTFSimpleProps) => {
     },
   };
   const paddindBySize = {
-    small: "px-8 py-2.5",
+    small: "px-2.5 xxs:px-6 py-1 sm:px-8 sm:py-2.5",
     default: "px-9 py-2.5",
   };
   const marginTitleBySize = {
-    small: "mb-1",
+    small: "mb-0.5 sm:mb-1",
     default: "mb-2.5",
   };
 
   return (
     <div
       className={twMerge(
-        `flex items-center justify-start relative overflow-hidden rounded-15 bg-purple-violet-100 text-white`,
+        `flex items-center justify-start relative overflow-hidden rounded-xl sm:rounded-15 bg-purple-violet-100 text-white`,
         className
       )}
     >
       {iconButton && (
-        <button className="absolute top-5 right-5 z-10" onClick={onClickButton}>
+        <button className="absolute top-2.5 right-2.5 sm:top-5 sm:right-5 z-10 text-base sm:text-xl" onClick={onClickButton}>
           {iconButton}
         </button>
       )}
@@ -72,11 +78,7 @@ const SimpleNFT = (props: INTFSimpleProps) => {
           alt={title}
           width={imageDimentionBySize[size].width}
           height={imageDimentionBySize[size].height}
-          style={{
-            objectFit: "cover",
-            width: imageDimentionBySize[size].width,
-            height: imageDimentionBySize[size].height,
-          }}
+          className={`${imageClassBySize[size]} object-cover`}
         />
       )}
 

@@ -38,7 +38,7 @@ const TradeItem = (props: ITradeItemProps) => {
         />
         <div className="relative z-30 w-full">
           <div className="mt-11 md:mt-8">
-            <h6 className="absolute top-1 md:top-0 right-0 text-current transition-opacity duration-300 ease-linear opacity-50 group-hover:opacity-100 text-xs md:text-xl">
+            <h6 className="absolute top-1 md:top-0 right-0 text-current transition-opacity opacity-50 group-hover:opacity-100 text-xs md:text-xl">
               Step 0{item.step}
             </h6>
             <div className="mb-1 md:mb-4 text-md md:text-xl font-medium leading-none">

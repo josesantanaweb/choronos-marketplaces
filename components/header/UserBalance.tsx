@@ -39,7 +39,7 @@ const UserBalance = (props: IUserBalanceProps) => {
     <div
       ref={ref}
       onClick={handleOpenMenu}
-      className={`text-white relative flex items-center justify-between gap-1 sm:gap-2 pl-2 sm:pl-3.5 pr-6 py-1.5 rounded-2xl cursor-pointer h-9 sm:h-14 transition-all duration-300 ease-linear hover:bg-purple-dark-300 max-w-[156px] sm:max-w-[215px] w-full ${
+      className={`text-white relative flex items-center justify-between gap-1 sm:gap-2 pl-2 sm:pl-3.5 pr-6 py-1.5 rounded-2xl cursor-pointer h-9 sm:h-14 transition-all hover:bg-purple-dark-300 max-w-[156px] sm:max-w-[215px] w-full ${
         isVisible ? "bg-purple-dark-300" : "bg-purple-dark-600"
       }`}
     >

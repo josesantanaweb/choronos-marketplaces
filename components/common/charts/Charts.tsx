@@ -1,20 +1,24 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ComponentVisible } from "@/hooks/useVisible";
 import Image from "next/image";
-
-import Selector from "@/components/home/stats/Selector";
-import IconButton from "../buttons/icon-button/IconButton";
-import SpinerLoading from "@/components/modals/components/SpineLoading";
 
 import { PiSelectionBackground } from "react-icons/pi";
 
-import {  Chart } from "./Chart";
+import Selector from "@/components/home/stats/Selector";
+import IconButton from "@/components/common/buttons/icon-button/IconButton";
+import SpinerLoading from "@/components/modals/components/SpineLoading";
 
 import { formatNumber, IOptionsFormatNumber } from "@/utils/format-number";
+import twMerge from "@/utils/tw-merge-custom";
+
+import { ComponentVisible } from "@/hooks/useVisible";
 
 import ChronosLargeImage from "@/assets/components/listing/chronos-large.png";
-import twMerge from "@/utils/tw-merge-custom";
+
+import { Chart } from "./Chart";
+
+import useElementSize from "@/hooks/useElementSize";
+import useWindowSize from "@/hooks/useWindowSize";
 
 interface IChartsProps {
   data: [number, number][] | null;
@@ -23,7 +27,6 @@ interface IChartsProps {
   height?: number;
   disableDateRange?: boolean;
   disableChangeStyle?: boolean;
-  isMobile?: Boolean;
   tooltipValueFormatOptions?: IOptionsFormatNumber;
   className?: string;
 }
@@ -78,48 +81,62 @@ export default function Charts(
   const {
     data,
     onDateChange,
-    width,
-    height,
+    width = 870,
+    height = 348,
     disableDateRange = false,
     disableChangeStyle = true,
     currency,
-    isMobile = false,
     tooltipValueFormatOptions = null,
-    className = '',
+    className = "",
   } = props;
 
   const [period, setPeriod] = useState<number | null>(1);
   const [isBars, setIsBars] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const [w, setW] = useState(width);
+  const [h, setH] = useState(height);
+
+  const containerSVGRef = useRef(null);
 
   const {
     ref,
     isVisible: isDateRangeOpen,
     setIsVisible: setIsDateRangeOpen,
   } = ComponentVisible(false);
-
+  const { clientWidth } = useElementSize(containerSVGRef.current);
+  const { innerWidth } = useWindowSize();
 
   const handleSetPeriod = (period: number | null) => {
     setPeriod(period);
     onDateChange && onDateChange(period);
-  }
+  };
 
   useEffect(() => {
     handleSetPeriod(7);
   }, []);
 
+  useEffect(() => {
+    if (innerWidth) setIsMobile(innerWidth < 768);
+  }, [innerWidth]);
+
+  useEffect(() => {
+    if (isMobile && clientWidth) {
+      setW(clientWidth);
+    } else {
+      setW(width);
+    }
+  }, [width, isMobile, clientWidth]);
+
   return (
     <div
-      className={twMerge(`bg-purple-dark-500 text-white rounded-[30px] ${
-        isMobile ? "px-4 py-5" : "px-11 py-8"
-      }`, className)}
+      className={twMerge(
+        `bg-purple-dark-500 text-white rounded-[30px] px-4 py-5 lg:px-11 lg:py-8`,
+        className
+      )}
     >
       <div className="z-[2] mb-3.5 flex items-center justify-between">
         {props.currency !== "ETH" && props.currency !== "CHR" && (
-          <p
-            className={`${
-              isMobile ? "text-base" : "text-[22px]"
-            } font-medium leading-none`}
-          >
+          <p className={`text-base md:text-[22px] font-medium leading-none`}>
             {props.title}
           </p>
         )}
@@ -132,16 +149,13 @@ export default function Charts(
                   ? `/images/ethereum.png`
                   : ChronosLargeImage
               }
-              width={isMobile ? 24 : 28}
-              height={isMobile ? 24 : 28}
+              width={28}
+              height={28}
               alt={props.currency === "ETH" ? "Ethereum" : "Chronos"}
+              className="w-6 h-6 md:w-7 md:h-7"
             />
             <div>
-              <div
-                className={`${
-                  isMobile ? "text-xs" : "text-base"
-                } leading-none mb-2`}
-              >
+              <div className={`text-xs md:text-base leading-none mb-2`}>
                 {formatNumber(
                   props.currency === "ETH"
                     ? props.currencyValue?.eth
@@ -164,10 +178,7 @@ export default function Charts(
             {!disableChangeStyle && (
               <IconButton
                 onClick={() => setIsBars(!isBars)}
-                icon={
-                  isBars ? "line-area-chart" : "line-bar-chart"
-                }
-                size={isMobile ? "small" : undefined}
+                icon={isBars ? "line-area-chart" : "line-bar-chart"}
               />
             )}
 
@@ -178,7 +189,6 @@ export default function Charts(
                     onClick={() => setIsDateRangeOpen(!isDateRangeOpen)}
                     selected={isDateRangeOpen}
                     icon="line-calendar"
-                    size={isMobile ? "small" : undefined}
                     className="bg-purple-dark-600"
                   />
                   <AnimatePresence>
@@ -188,7 +198,7 @@ export default function Charts(
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        className="absolute top-[110%] z-[100] right-0 p-2 bg-purple-dark-600 rounded-15 bg-opacity-60 backdrop-blur-[25px]"
+                        className="absolute top-[110%] z-[100] right-0 p-1 sm:p-2 bg-purple-dark-600 rounded-15 bg-opacity-60 backdrop-blur-[25px]"
                       >
                         <Selector
                           value={period}
@@ -211,9 +221,9 @@ export default function Charts(
         )}
       </div>
 
-      <div className="z-0 mx-auto w-fit">
+      <div ref={containerSVGRef} className="z-0 mx-auto md:w-fit">
         {!data || !data.length ? (
-          <div className={`mb-3.5 ${isMobile ? "pb-[40px]" : "pb-[55px]"}`}>
+          <div className={`mb-3.5 pb-[40px] md:pb-[55px]`}>
             {!data ? (
               <SpinerLoading className="mx-auto" />
             ) : (
@@ -230,10 +240,10 @@ export default function Charts(
             data={data}
             type={isBars ? "bar" : "line"}
             currency={currency}
-            width={width}
-            height={height}
-            isMobile={isMobile}
+            width={w}
+            height={h}
             tooltipValueFormatOptions={tooltipValueFormatOptions}
+            isMobile={isMobile}
           />
         )}
       </div>

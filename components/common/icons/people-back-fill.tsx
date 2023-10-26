@@ -40,7 +40,7 @@ const PeopleBackFillIcon = (props: IIconProps) => {
               : ""
           } ${
             gradientTransition
-              ? "transition-opacity duration-300 ease-linear"
+              ? "transition-opacity"
               : ""
           } icon`}
         />
@@ -58,7 +58,7 @@ const PeopleBackFillIcon = (props: IIconProps) => {
               : "opacity-0"
           } ${
             gradientTransition
-              ? "transition-opacity duration-300 ease-linear"
+              ? "transition-opacity"
               : ""
           } icon_gradient`}
         />

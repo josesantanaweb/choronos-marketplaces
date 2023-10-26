@@ -1,7 +1,5 @@
 "use client";
 
-import { useState } from "react";
-
 import { FaHistory } from "react-icons/fa";
 
 import Button from "@/components/common/buttons/button/Button";
@@ -24,7 +22,7 @@ const FrontPage = (props: IFrontPageProps) => {
 
   return (
     <div
-      className="relative w-full h-96 rounded-3xl"
+      className="relative w-full h-96 rounded-3xl bg-no-repeat bg-cover hidden md:block"
       style={{
         backgroundImage: `url(/images/front-page.png)`,
       }}

@@ -57,7 +57,7 @@ const OfferItem = () => {
       </div>
 
       <div
-        className={`gap-2 md:gap-10 flex-col md:flex-row items-start md:items-center mt-4 md:mt-0 w-full md:w-auto ${openClass}`}
+        className={`gap-2 md:gap-10 flex-col md:flex-row items-start md:items-center mt-4 md:mt-0 w-full md:w-auto flex ${openClass}`}
       >
         <p className="text-white text-sm">Expiry: in 5 days</p>
         <div className="items-center gap-2 hidden md:flex">
