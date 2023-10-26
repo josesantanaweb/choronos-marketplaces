@@ -11,7 +11,7 @@ const ProfileContent = () => {
 
   return (
     <div className="relative w-full">
-      <div className="md:container mx-auto px-2.5 md:px-0 py-14 relative">
+      <div className="global-container py-14 relative">
         <FrontPage
           setIsFavorite={setIsFavorite}
           isFavorite={isFavorite}

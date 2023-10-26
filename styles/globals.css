@@ -121,14 +121,14 @@ body {
 }
 
 .bg-key {
-  @apply 
+  @apply
   after:bg-homebg2
   after:bg-no-repeat
   after:bg-contain
   after:absolute
   after:content-['']
   after:mix-blend-lighten
- 
+
   after:w-[131.919%]
   after:pt-[79.81%]
   after:top-5
@@ -172,4 +172,8 @@ body {
 
 .text-gradient-purple-100 {
   @apply text-transparent bg-gradient-purple-100 bg-clip-text webkit-text-fill-color-transparent;
+}
+
+.global-container {
+  @apply 1xl:max-w-[1600px] max-w-screen-xl mx-auto px-[16px] md:px-0;
 }

@@ -18,7 +18,7 @@ const NFTSection = () => {
   const handleMuted = () => setIsMuted(!isMuted)
 
   return (
-    <div className="md:container mx-auto mb-6 md:mb-12 px-2.5 md:px-0">
+    <div className="global-container mb-6 md:mb-12">
       <div className="flex gap-8 flex-wrap md:flex-nowrap">
         {NFTSelected === "chrNFT" ? (
           <div className="relative w-full md:w-1/3">

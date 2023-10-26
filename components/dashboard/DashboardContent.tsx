@@ -15,7 +15,7 @@ const DashboardContent = () => {
   return (
     <div className="relative w-full">
       <div className="absolute w-full h-[450px] bg-mountains"></div>
-      <div className="md:container mx-auto px-2.5 md:px-0 py-14 relative z-40">
+      <div className="global-container py-14 relative z-40">
         <div className="flex gap-5 flex-col lg:flex-row">
           <Sidebar setMenu={setMenu} />
           <div className="w-full">
